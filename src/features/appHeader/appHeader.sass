@@ -1,0 +1,26 @@
+.appheader__menu
+    position: fixed
+    top: 52px
+    left: 10%
+    &__item
+        display: inline-block
+        color: #FFF
+        text-decoration: none
+        margin-right: 40px
+        transition: all 0.5s
+        font-size: 12px
+        line-height: 17px
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+        &:hover
+            transform: scale(1.2)
+        &:first-child
+            position: relative
+            &::before
+                position: absolute
+                content: ""
+                top: -22px
+                left: -31px
+                background: url('../../assets/footer_icon_white.svg')
+                width: 35px
+                height: 35px
+                filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))

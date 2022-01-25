@@ -5,16 +5,20 @@ import CoffeePage from '../pages/coffeePage/CoffeePage';
 import MainPage from '../pages/mainPage/MainPage';
 import GoodsPage from '../pages/goodsPage/GoodsPage';
 
+import './app.sass';
+import '../../style/reset.css';
+import '../../style/titles.sass'
+
 const App = () => {
     return(
-        <>
+        <div className='app'>
             <AppHeader/>
             <MainPage/>
-            <CoffeePage/>
+            {/* <CoffeePage/>
             <GoodsPage/>
-            <CoffeeItemPage/>
+            <CoffeeItemPage/> */}
             <AppFooter/>
-        </>
+        </div>
     )
 }
 

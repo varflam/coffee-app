@@ -1,7 +1,12 @@
+import './appHeader.sass';
 
 const AppHeader = () => {
     return(
-        <div>AppHeader</div>
+        <nav className="appheader__menu">
+            <a href="!#" className="appheader__menu__item">Coffee house</a>
+            <a href="!#" className="appheader__menu__item">Our coffee</a>
+            <a href="!#" className="appheader__menu__item">For your pleasure</a>
+        </nav>
     )
 }
 
