@@ -1,0 +1,26 @@
+.hidden
+    position: relative
+    height: 20px
+    width: 200px
+    margin: 0 auto
+    &::after
+        position: absolute
+        content: ""
+        top: 35px
+        left: 0
+        width: 60px
+        height: 1px
+        background: #000
+    &::before
+        position: absolute
+        content: ""
+        top: 35px
+        left: 140px
+        width: 60px
+        height: 1px
+        background: #000
+    &_white
+        &::after
+            background: #FFF
+        &::before
+            background: #FFF

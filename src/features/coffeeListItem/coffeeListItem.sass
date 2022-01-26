@@ -1,0 +1,36 @@
+.coffee-item
+    display: flex
+    flex-wrap: wrap
+    align-items: center
+    flex-direction: column
+    width: 220px
+    height: 260px
+    filter: drop-shadow(5px 5px 15px rgba(0, 0, 0, 0.25))
+    background: #FFF
+    &_best
+        height: 240px
+        background: rgba(255, 255, 255, 0.65)
+        filter: none
+    img
+        margin-top: 22px
+        width: 151px
+        height: 130px
+    &__name
+        display: inline-block
+        text-decoration: none
+        color: #000
+        margin-top: 14px
+        font-size: 14px
+        line-height: 20px
+        transition: .3s
+        &:hover
+            cursor: pointer
+            transform: scale(1.1)
+    &__price, &__country
+        margin-top: 10px
+        margin-right: 22px
+        font-size: 14px
+        line-height: 20px
+        align-self: end
+    &__price
+        font-weight: bold

@@ -1,0 +1,38 @@
+.header
+    padding: 130px 0 84px 0
+    background: url('../../../assets/ourCoffeePage/bg.jpg') center center /cover no-repeat
+    text-align: center
+
+.about
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    padding: 70px 0 120px 0
+    max-width: 691px
+    margin: 0 auto
+    text-align: center
+    &__img
+        width: 272px
+        height: 355px
+        filter: drop-shadow(5px 5px 30px rgba(0, 0, 0, 0.25))
+    &__info
+        max-width: 346px
+        img
+            margin-bottom: 25.7px
+    &__descr
+        position: relative
+        font-size: 14px
+        line-height: 20px
+        &::before
+            position: absolute
+            content: ""
+            top: calc(100% + 73px)
+            left: -50%
+            background: #000
+            width: 240px
+            height: 1px
+
+.results
+    display: flex
+    justify-content: center
+    margin: 61px 0 60px 0
