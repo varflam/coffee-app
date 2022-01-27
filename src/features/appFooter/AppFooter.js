@@ -10,7 +10,7 @@ const AppFooter = () => {
                 <a href="!#" className="footer__menu__item">Our coffee</a>
                 <a href="!#" className="footer__menu__item">For your pleasure</a>
             </nav>
-            <div className="hidden"></div>
+            <div className="lines-element"></div>
             <img src={coffeeIcon} alt="Coffee icon" className="footer__icon" />
         </footer>
     )

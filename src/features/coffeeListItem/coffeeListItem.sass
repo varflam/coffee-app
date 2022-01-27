@@ -1,16 +1,29 @@
 .coffee-item
-    display: flex
-    flex-wrap: wrap
-    align-items: center
-    flex-direction: column
     width: 220px
     height: 260px
     filter: drop-shadow(5px 5px 15px rgba(0, 0, 0, 0.25))
-    background: #FFF
     &_best
         height: 240px
-        background: rgba(255, 255, 255, 0.65)
         filter: none
+    &__link
+        display: flex
+        flex-wrap: wrap
+        align-items: center
+        flex-direction: column
+        width: 100%
+        height: 100%
+        text-decoration: none
+        color: #000
+        background: #FFF
+        transition: all .2s
+        &:hover
+            filter: drop-shadow(5px 5px 35px rgba(0, 0, 0, 0.25))
+        &_best
+            background: rgba(255, 255, 255, 0.65)
+            transition: .3s
+            &:hover
+                filter: none
+                transform: scale(1.1)
     img
         margin-top: 22px
         width: 151px
@@ -23,9 +36,9 @@
         font-size: 14px
         line-height: 20px
         transition: .3s
-        &:hover
-            cursor: pointer
-            transform: scale(1.1)
+        // &:hover
+        //     cursor: pointer
+        //     transform: scale(1.1)
     &__price, &__country
         margin-top: 10px
         margin-right: 22px

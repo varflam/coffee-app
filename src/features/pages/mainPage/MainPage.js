@@ -11,7 +11,7 @@ const MainPage = () => {
         <div className="mainpage">
             <section className="promo">
                 <h1 className="title">Everything You Love About Coffee</h1>
-                <div className="hidden hidden_white"></div>
+                <div className="lines-element lines-element_white"></div>
                 <img src={coffeeIconWhite} alt="Coffee icon" className="promo__icon" />
                 <h2 className="title title_white">
                 We makes every day full of energy and taste
@@ -22,7 +22,7 @@ const MainPage = () => {
             
             <section className="about">
                 <h2 className="title">About Us</h2>
-                <div className="hidden"></div>
+                <div className="lines-element"></div>
                 <img src={coffeeIcon} alt="Coffee icon" className="about__icon" />
                 <p className="about__descr">
                 Extremity sweetness difficult behaviour he of. On disposal of as landlord horrible.

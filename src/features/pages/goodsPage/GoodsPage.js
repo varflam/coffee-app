@@ -1,3 +1,4 @@
+import './goodsPage.sass';
 
 const GoodsPage = () => {
     return(

@@ -7,15 +7,15 @@ import GoodsPage from '../pages/goodsPage/GoodsPage';
 import './app.sass';
 import '../../style/reset.css';
 import '../../style/titles.sass';
-import '../../style/pseudoelements.sass';
+import '../../style/linesElement.sass';
 
 const App = () => {
     return(
         <div className='app'>
             <AppHeader/>
             {/* <MainPage/> */}
-            <CoffeePage/>
-            {/* <GoodsPage/> */}
+            {/* <CoffeePage/> */}
+            <GoodsPage/>
             <AppFooter/>
         </div>
     )

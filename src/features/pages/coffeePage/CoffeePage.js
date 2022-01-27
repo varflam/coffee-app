@@ -1,5 +1,6 @@
 import CoffeeFilter from "../../coffeeFilter/CoffeeFilter";
 import CoffeeList from "../../coffeeList/CoffeeList";
+import CoffeeItem from '../../coffeeItem/CoffeeItem';
 
 import './coffeePage.sass';
 
@@ -8,7 +9,7 @@ import beanIcon from '../../../assets/coffee_icon.svg';
 
 const CoffeePage = () => {
     return(
-        <div className="goodspage">
+        <div className="coffee-page">
             <header className="header">
                 <h1 className="title">Our Coffee</h1>
             </header>
@@ -16,7 +17,7 @@ const CoffeePage = () => {
                 <img src={img} alt="About our beans" className="about__img" />
                 <div className="about__info">
                     <h2 className="title">About our beans</h2>
-                    <div className="hidden"></div>
+                    <div className="lines-element"></div>
                     <img src={beanIcon} alt="About beans" />
                     <div className="about__descr">
                     Extremity sweetness difficult behaviour he of. On disposal of as landlord horrible.
@@ -34,6 +35,7 @@ const CoffeePage = () => {
             <div className="results">
                 <CoffeeList/>
             </div>
+            {/* <CoffeeItem/> */}
         </div>
     )
 }
