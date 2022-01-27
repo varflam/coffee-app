@@ -13,7 +13,7 @@ const CoffeePage = () => {
             <header className="header">
                 <h1 className="title">Our Coffee</h1>
             </header>
-            <div className="about">
+            {/* <div className="about">
                 <img src={img} alt="About our beans" className="about__img" />
                 <div className="about__info">
                     <h2 className="title">About our beans</h2>
@@ -34,8 +34,8 @@ const CoffeePage = () => {
             <CoffeeFilter/>
             <div className="results">
                 <CoffeeList/>
-            </div>
-            {/* <CoffeeItem/> */}
+            </div> */}
+            <CoffeeItem/>
         </div>
     )
 }

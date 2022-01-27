@@ -1,8 +1,7 @@
-import AppHeader from '../appHeader/AppHeader';
-import AppFooter from '../appFooter/AppFooter';
 import CoffeePage from '../pages/coffeePage/CoffeePage';
 import MainPage from '../pages/mainPage/MainPage';
 import GoodsPage from '../pages/goodsPage/GoodsPage';
+import Navigation from '../navigation/Navigation';
 
 import './app.sass';
 import '../../style/reset.css';
@@ -12,11 +11,11 @@ import '../../style/linesElement.sass';
 const App = () => {
     return(
         <div className='app'>
-            <AppHeader/>
+            <Navigation/>
             {/* <MainPage/> */}
-            {/* <CoffeePage/> */}
-            <GoodsPage/>
-            <AppFooter/>
+            <CoffeePage/>
+            {/* <GoodsPage/> */}
+            <Navigation footer/>
         </div>
     )
 }
