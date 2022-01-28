@@ -28,6 +28,7 @@ const GoodsPage = () => {
                     is song that held help face.
                     </div>
                 </div>
+                <div className="lines-element lines-element_big"></div>
             </div>
             <div className="goods-page__coffee">
                 <CoffeeList/>

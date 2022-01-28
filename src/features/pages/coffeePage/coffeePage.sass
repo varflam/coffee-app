@@ -7,8 +7,8 @@
     display: flex
     flex-wrap: wrap
     justify-content: space-between
-    padding: 70px 0 120px 0
-    max-width: 691px
+    padding: 70px 10px 120px 10px
+    max-width: 671px
     margin: 0 auto
     text-align: center
     &__img
@@ -20,19 +20,20 @@
         img
             margin-bottom: 25.7px
     &__descr
-        position: relative
         font-size: 14px
         line-height: 20px
-        &::before
-            position: absolute
-            content: ""
-            top: calc(100% + 73px)
-            left: -50%
-            background: #000
-            width: 240px
-            height: 1px
-
 .results
     display: flex
     justify-content: center
     margin: 61px 0 60px 0
+
+@media (max-width: 768px)
+    .header
+        padding: 100px 0 54px 0
+
+@media (max-width: 674px)
+    .about
+        flex-direction: column
+        align-items: center
+        img
+            margin-bottom: 20px

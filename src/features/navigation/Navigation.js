@@ -7,9 +7,9 @@ const Navigation = ({footer}) => {
         return(
             <footer className='footer'>
             <nav className="footer__menu">
-                <a href="!#" className="footer__menu__item">Coffee house</a>
-                <a href="!#" className="footer__menu__item">Our coffee</a>
-                <a href="!#" className="footer__menu__item">For your pleasure</a>
+                <a href="!#" className="menu__item footer__menu__item">Coffee house</a>
+                <a href="!#" className="menu__item footer__menu__item">Our coffee</a>
+                <a href="!#" className="menu__item footer__menu__item">For your pleasure</a>
             </nav>
             <div className="lines-element"></div>
             <img src={coffeeIcon} alt="Coffee icon" className="icon" />

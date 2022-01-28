@@ -13,8 +13,8 @@ const App = () => {
         <div className='app'>
             <Navigation/>
             {/* <MainPage/> */}
-            <CoffeePage/>
-            {/* <GoodsPage/> */}
+            {/* <CoffeePage/> */}
+            <GoodsPage/>
             <Navigation footer/>
         </div>
     )

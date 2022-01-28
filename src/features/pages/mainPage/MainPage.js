@@ -20,11 +20,11 @@ const MainPage = () => {
                 <a href="!#" className="btn">More</a>
             </section>
             
-            <section className="about">
+            <section className="mainpage__about">
                 <h2 className="title">About Us</h2>
                 <div className="lines-element"></div>
-                <img src={coffeeIcon} alt="Coffee icon" className="about__icon" />
-                <p className="about__descr">
+                <img src={coffeeIcon} alt="Coffee icon" className="mainpage__about__icon" />
+                <p className="mainpage__about__descr">
                 Extremity sweetness difficult behaviour he of. On disposal of as landlord horrible.
                 Afraid at highly months do things on at. Situation recommend objection do intention
                 so questions. As greatly removed calling pleased improve an. Last ask him cold feel
