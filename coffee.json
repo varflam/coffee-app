@@ -1,0 +1,70 @@
+{
+    "coffee": [
+        {
+            "id": 1,
+            "name": "AROMISTICO Coffee 1 kg",
+            "country": "Brazil",
+            "price": "6.99$",
+            "img": "https://aromistico.coffee/img/aromisticosite4.jpg",
+            "best": true
+        },
+        {
+            "id": 2,
+            "name": "Solimo Coffee Beans 2 kg",
+            "country": "Kenya",
+            "price": "10.73$",
+            "img": "https://m.media-amazon.com/images/I/51JpXF5wO3L.jpg",
+            "best": true
+        },
+        {
+            "id": 3,
+            "name": "Presto Coffee Beans 1 kg",
+            "country": "Columbia",
+            "price": "15.99$",
+            "img": "https://cdn.shopify.com/s/files/1/0114/9383/4811/products/BrazilianBlendWholebean1_grande.png?v=1636560014",
+            "best": true
+        },
+        {
+            "id": 4,
+            "name": "AROMISTICO Coffee 2 kg",
+            "country": "Brazil",
+            "price": "10.99$",
+            "img": "https://aromistico.coffee/img/aromisticosite4.jpg"
+        },
+        {
+            "id": 5,
+            "name": "AROMISTICO Coffee 3 kg",
+            "country": "Brazil",
+            "price": "15.99$",
+            "img": "https://aromistico.coffee/img/aromisticosite4.jpg"
+        },
+        {
+            "id": 6,
+            "name": "Solimo Coffee Beans 1 kg",
+            "country": "Kenya",
+            "price": "6.73$",
+            "img": "https://m.media-amazon.com/images/I/51JpXF5wO3L.jpg"
+        },
+        {
+            "id": 7,
+            "name": "Solimo Coffee Beans 3 kg",
+            "country": "Kenya",
+            "price": "12.73$",
+            "img": "https://m.media-amazon.com/images/I/51JpXF5wO3L.jpg"
+        },
+        {
+            "id": 8,
+            "name": "Presto Coffee Beans 2 kg",
+            "country": "Columbia",
+            "price": "20.99$",
+            "img": "https://cdn.shopify.com/s/files/1/0114/9383/4811/products/BrazilianBlendWholebean1_grande.png?v=1636560014"
+        },
+        {
+            "id": 9,
+            "name": "Presto Coffee Beans 3 kg",
+            "country": "Columbia",
+            "price": "25.99$",
+            "img": "https://cdn.shopify.com/s/files/1/0114/9383/4811/products/BrazilianBlendWholebean1_grande.png?v=1636560014"
+        }
+    ]
+}

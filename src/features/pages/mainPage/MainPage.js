@@ -42,7 +42,7 @@ const MainPage = () => {
 
             <section className="our-best">
                 <h2 className="title">Our best</h2>
-                <CoffeeList best/>
+                <CoffeeList bestCoffee/>
             </section>
         </div>
         )

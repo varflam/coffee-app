@@ -1,7 +1,10 @@
 import { configureStore } from '@reduxjs/toolkit';
+import { coffeeApiSlice } from '../api/apiSlice';
 
 export const store = configureStore({
   reducer: {
-    counter: 1,
+    [coffeeApiSlice.reducerPath]: coffeeApiSlice.reducer
   },
+  middleware: getDefaultMiddleware => getDefaultMiddleware().concat(coffeeApiSlice.middleware),
+    devTools: process.env.NODE_ENV !== 'production'
 });
