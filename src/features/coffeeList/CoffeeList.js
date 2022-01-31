@@ -1,12 +1,39 @@
+import { useCallback } from "react";
+import { useSelector } from "react-redux";
 import { useGetCoffeeQuery } from "../../api/apiSlice";
 import CoffeeListItem from "../coffeeListItem/CoffeeListItem";
 
 import './coffeeList.sass';
 const CoffeeList = ({bestCoffee}) => {
+    const { filterCountry, filterName } = useSelector(state => state.filters);
 
     const {
         data: coffee = []
     } = useGetCoffeeQuery();
+
+    const filterCoffeeByCountry = useCallback((arr) => {
+        const filteredCoffee = arr.slice();
+
+        if(filterCountry === 'all') {
+            return filteredCoffee;
+        } else {
+            return filteredCoffee.filter(coffee => coffee.country === filterCountry);
+        }
+    }, [filterCountry]);
+
+    const filterCoffeeByName = (arr) => {
+        const filteredCoffee = arr.slice();
+
+        if(filterName === '') {
+            return filteredCoffee;
+        } else {
+            return filteredCoffee.filter(coffee => {
+                return coffee.name.indexOf(filterName) > -1
+            });
+        }
+    }
+
+    const filteredCoffee = filterCoffeeByCountry(filterCoffeeByName(coffee));
 
     const renderCoffeeList = arr => {
         if(bestCoffee) {
@@ -23,7 +50,7 @@ const CoffeeList = ({bestCoffee}) => {
         });
     }
 
-    const elements = renderCoffeeList(coffee);
+    const elements = bestCoffee ? renderCoffeeList(coffee) : renderCoffeeList(filteredCoffee);
 
     return(
         <ul className="coffee-list">
