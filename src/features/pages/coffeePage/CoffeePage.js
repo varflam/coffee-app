@@ -1,6 +1,5 @@
 import CoffeeFilter from "../../coffeeFilter/CoffeeFilter";
 import CoffeeList from "../../coffeeList/CoffeeList";
-import CoffeeItem from '../../coffeeItem/CoffeeItem';
 
 import './coffeePage.sass';
 
@@ -36,7 +35,6 @@ const CoffeePage = () => {
             <div className="results">
                 <CoffeeList/>
             </div>
-            <CoffeeItem/>
         </div>
     )
 }

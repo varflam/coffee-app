@@ -8,8 +8,11 @@ export const coffeeApiSlice = createApi({
     endpoints: builder => ({
         getCoffee: builder.query({
             query: () => '/coffee'
+        }),
+        getSingleCoffee: builder.query({
+            query: id => `/coffee/${id}`
         })
     })
 });
 
-export const { useGetCoffeeQuery } = coffeeApiSlice;
+export const { useGetCoffeeQuery, useGetSingleCoffeeQuery } = coffeeApiSlice;

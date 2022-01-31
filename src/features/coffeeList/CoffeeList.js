@@ -39,14 +39,14 @@ const CoffeeList = ({bestCoffee}) => {
         if(bestCoffee) {
             return arr.map(({id, best, ...props}) => {
                 if(best) {
-                    return <CoffeeListItem bestCoffee key={id} {...props}/>
+                    return <CoffeeListItem bestCoffee key={id} id={id} {...props}/>
                 }
                 return;
             });
         } 
 
         return arr.map(({id, ...props}) => {
-            return <CoffeeListItem key={id} {...props}/>
+            return <CoffeeListItem key={id} id={id} {...props}/>
         });
     }
 

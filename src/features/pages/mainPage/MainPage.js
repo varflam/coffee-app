@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 import CoffeeList from '../../coffeeList/CoffeeList';
 
 import './mainPage.sass';
@@ -17,7 +19,7 @@ const MainPage = () => {
                 We makes every day full of energy and taste
                 <br />
                 Want to try our beans?</h2>
-                <a href="!#" className="btn">More</a>
+                <Link to="/coffee" className="btn">More</Link>
             </section>
             
             <section className="mainpage__about">
