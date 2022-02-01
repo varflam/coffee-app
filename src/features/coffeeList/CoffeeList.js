@@ -1,6 +1,9 @@
 import { useCallback } from "react";
 import { useSelector } from "react-redux";
+
 import { useGetCoffeeQuery } from "../../api/apiSlice";
+import Loading from '../alerts/Loading';
+import ErrorMessage from "../alerts/ErrorMessage";
 import CoffeeListItem from "../coffeeListItem/CoffeeListItem";
 
 import './coffeeList.sass';
@@ -8,7 +11,9 @@ const CoffeeList = ({bestCoffee}) => {
     const { filterCountry, filterName } = useSelector(state => state.filters);
 
     const {
-        data: coffee = []
+        data: coffee = [],
+        isLoading,
+        isError
     } = useGetCoffeeQuery();
 
     const filterCoffeeByCountry = useCallback((arr) => {
@@ -20,6 +25,13 @@ const CoffeeList = ({bestCoffee}) => {
             return filteredCoffee.filter(coffee => coffee.country === filterCountry);
         }
     }, [filterCountry]);
+
+    
+    if(isLoading) {
+        return <Loading/>
+    } else if(isError) {
+        return <ErrorMessage/>
+    }
 
     const filterCoffeeByName = (arr) => {
         const filteredCoffee = arr.slice();

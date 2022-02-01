@@ -1,5 +1,8 @@
+import {Helmet} from "react-helmet";
+
 import CoffeeFilter from "../../coffeeFilter/CoffeeFilter";
 import CoffeeList from "../../coffeeList/CoffeeList";
+import ErrorBoundary from '../../errorBoundary/ErrorBoundary';
 
 import './coffeePage.sass';
 
@@ -9,6 +12,13 @@ import beanIcon from '../../../assets/coffee_icon.svg';
 const CoffeePage = () => {
     return(
         <div className="coffee-page">
+            <Helmet>
+                <meta
+                name="description"
+                content="Our coffee"
+                />
+                <title>Our coffee</title>
+            </Helmet>
             <header className="header">
                 <h1 className="title">Our Coffee</h1>
             </header>
@@ -33,7 +43,9 @@ const CoffeePage = () => {
             </div>
             <CoffeeFilter/>
             <div className="results">
-                <CoffeeList/>
+                <ErrorBoundary>
+                    <CoffeeList/>
+                </ErrorBoundary>
             </div>
         </div>
     )

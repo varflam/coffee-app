@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
+import {Helmet} from "react-helmet";
 
 import CoffeeList from '../../coffeeList/CoffeeList';
+import ErrorBoundary from '../../errorBoundary/ErrorBoundary';
 
 import './mainPage.sass';
 
@@ -11,6 +13,13 @@ import coffeeIcon from '../../../assets/coffee_icon.svg';
 const MainPage = () => {
     return(
         <div className="mainpage">
+            <Helmet>
+                <meta
+                name="description"
+                content="Coffee for your pleasure"
+                />
+                <title>Coffee for your pleasure</title>
+            </Helmet>
             <section className="promo">
                 <h1 className="title">Everything You Love About Coffee</h1>
                 <div className="lines-element lines-element_white"></div>
@@ -44,7 +53,9 @@ const MainPage = () => {
 
             <section className="our-best">
                 <h2 className="title">Our best</h2>
-                <CoffeeList bestCoffee/>
+                <ErrorBoundary>
+                    <CoffeeList bestCoffee/>
+                </ErrorBoundary>
             </section>
         </div>
         )

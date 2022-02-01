@@ -1,4 +1,7 @@
+import {Helmet} from "react-helmet";
+
 import CoffeeList from "../../coffeeList/CoffeeList";
+import ErrorBoundary from '../../errorBoundary/ErrorBoundary';
 
 import './goodsPage.sass';
 
@@ -8,6 +11,13 @@ import beanIcon from '../../../assets/coffee_icon.svg';
 const GoodsPage = () => {
     return(
         <div className="goods-page">
+            <Helmet>
+                <meta
+                name="description"
+                content="Our coffee"
+                />
+                <title>For your pleasure</title>
+            </Helmet>
             <header className="header">
                 <h1 className="title">For your pleasure</h1>
             </header>
@@ -31,7 +41,9 @@ const GoodsPage = () => {
                 <div className="lines-element lines-element_big"></div>
             </div>
             <div className="goods-page__coffee">
-                <CoffeeList/>
+                <ErrorBoundary>
+                    <CoffeeList/>
+                </ErrorBoundary>
             </div>
         </div>
     )
