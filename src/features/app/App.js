@@ -5,10 +5,7 @@ import CoffeePage from '../pages/coffeePage/CoffeePage';
 import GoodsPage from '../pages/goodsPage/GoodsPage';
 import CoffeeItem from '../coffeeItem/CoffeeItem'
 
-import './app.sass';
-import '../../style/reset.css';
-import '../../style/titles.sass';
-import '../../style/linesElement.sass';
+import '../../style/style.sass';
 
 const App = () => {
     return(

@@ -2,7 +2,6 @@ import { useParams } from 'react-router-dom';
 import {Helmet} from "react-helmet";
 
 import { useGetSingleCoffeeQuery } from '../../api/apiSlice';
-import Loading from '../alerts/Loading';
 import ErrorMessage from "../alerts/ErrorMessage";
 
 import beanIcon from '../../assets/coffee_icon.svg';
@@ -14,13 +13,10 @@ const CoffeeItemPage = () => {
 
     const {
         data: coffeeItem = {},
-        isLoading,
         isError
     } = useGetSingleCoffeeQuery(id);
 
-    if(isLoading) {
-        return <Loading/>
-    } else if(isError) {
+    if(isError) {
         return <ErrorMessage/>
     }
 
