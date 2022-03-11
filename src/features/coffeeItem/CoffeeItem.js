@@ -2,7 +2,6 @@ import { useParams } from 'react-router-dom';
 import {Helmet} from "react-helmet";
 
 import { useGetSingleCoffeeQuery } from '../../api/apiSlice';
-import ErrorMessage from "../alerts/ErrorMessage";
 
 import beanIcon from '../../assets/coffee_icon.svg';
 
@@ -12,13 +11,8 @@ const CoffeeItemPage = () => {
     const {id} = useParams();
 
     const {
-        data: coffeeItem = {},
-        isError
+        data: coffeeItem = {}
     } = useGetSingleCoffeeQuery(id);
-
-    if(isError) {
-        return <ErrorMessage/>
-    }
 
     return(
         <div className="coffee-page">

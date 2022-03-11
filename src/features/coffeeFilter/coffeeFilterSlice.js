@@ -1,7 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
-    filterCountry: 'all',
+    filterCountry: 'All',
     filterName: ''
 }
 

@@ -19,7 +19,7 @@ const CoffeeList = ({bestCoffee}) => {
     const filterCoffeeByCountry = useCallback((arr) => {
         const filteredCoffee = arr.slice();
 
-        if(filterCountry === 'all') {
+        if(filterCountry === 'All') {
             return filteredCoffee;
         } else {
             return filteredCoffee.filter(coffee => coffee.country === filterCountry);
@@ -40,7 +40,7 @@ const CoffeeList = ({bestCoffee}) => {
             return filteredCoffee;
         } else {
             return filteredCoffee.filter(coffee => {
-                return coffee.name.indexOf(filterName) > -1
+                return coffee.name.toLowerCase().indexOf(filterName.toLowerCase()) > -1
             });
         }
     }
@@ -56,6 +56,10 @@ const CoffeeList = ({bestCoffee}) => {
                 return;
             });
         } 
+
+        if(arr.length === 0) {
+            return <p>Sorry, nothing was found</p>
+        }
 
         return arr.map(({id, ...props}) => {
             return <CoffeeListItem key={id} id={id} {...props}/>

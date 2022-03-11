@@ -1,52 +1,79 @@
-import { useDispatch } from "react-redux";
+import { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { setFilterCountry, setFilterName } from './coffeeFilterSlice';
-import { useFormik } from 'formik';
+import { useGetCounriesQuery } from '../../api/apiSlice';
+// import { useFormik } from 'formik';
+import classNames from 'classnames/bind';
 
 import './coffeeFilter.sass';
 
 const CoffeeFilter = () => {
     const dispatch = useDispatch();
+    const {filterCountry} = useSelector(state => state.filters);
+    const [inputValue, setInputValue] = useState('');
 
-    const formik = useFormik({
-        initialValues: {
-            name: ''
-        },
-        onSubmit: values => {
-            dispatch(setFilterName(values.name));
+    const {
+        data: countries = [],
+        isError,
+        isLoading
+    } = useGetCounriesQuery();
+
+    // const formik = useFormik({
+    //     initialValues: {
+    //         name: ''
+    //     },
+    //     onSubmit: values => {
+    //         dispatch(setFilterName(values.name));
+    //     }
+    // });
+    const onHandleChange = (e) => {
+        e.preventDefault();
+        const {value} = e.target;
+
+        setInputValue(value);
+        dispatch(setFilterName(value));
+    }
+
+    const renderBtns = (arr) => {
+
+        if (isLoading) {
+            return <p className='input__label'>Please wait...</p>
+        } else if (isError) {
+            return <p className='input__label'>Something went wrong</p>
         }
-    })
+
+        return arr.map(item => {
+
+            const btnClass = classNames({
+                'filter__btn': true,
+                'filter__btn_active': filterCountry === item
+            });
+
+            return <button 
+            key={item}
+            className={btnClass}
+            onClick={() => dispatch(setFilterCountry(item))}
+            >{item}</button>
+        });
+    }
 
     return(
         <div className="filter">
-            <form onSubmit={formik.handleSubmit}>
+            <form onSubmit={e => onHandleChange(e)}>
                 <label className="input__label" htmlFor="coffee-search">Looking for</label>
                 <input 
                         id="name" 
                         className="filter__input" 
                         type="text" 
+                        nane="country"
                         placeholder="start typing here..."
-                        onChange={formik.handleChange}
-                        value={formik.values.name}/>
+                        onChange={e => onHandleChange(e)}
+                        value={inputValue}/>
             </form>
             <div className="filter__country">
                 <div className="filter__country__text">Or filter</div>
                 <div className="filter__btn-group">
-                    <button 
-                            className="filter__btn"
-                            onClick={() => dispatch(setFilterCountry('all'))}
-                            >All</button>
-                    <button 
-                            className="filter__btn"
-                            onClick={() => dispatch(setFilterCountry('Brazil'))}
-                            >Brazil</button>
-                    <button 
-                            className="filter__btn"
-                            onClick={() => dispatch(setFilterCountry('Kenya'))}
-                            >Kenya</button>
-                    <button 
-                            className="filter__btn"
-                            onClick={() => dispatch(setFilterCountry('Columbia'))}
-                            >Columbia</button>
+                    {renderBtns(countries)}
                 </div>
             </div>
         </div>
