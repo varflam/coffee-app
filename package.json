@@ -19,7 +19,7 @@
     "sass": "^1.49.0"
   },
   "scripts": {
-    "start": "concurrently \"react-scripts start\" \"npx json-server coffee.json --port 3001\"",
+    "start": "concurrently \"react-scripts start\" \"node  coffee.json\"",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
