@@ -2,8 +2,7 @@ import { useCallback } from "react";
 import { useSelector } from "react-redux";
 
 import { useGetCoffeeQuery } from "../../api/apiSlice";
-import Loading from '../alerts/Loading';
-import ErrorMessage from "../alerts/ErrorMessage";
+import Skeleton from "./Skeleton";
 import CoffeeListItem from "../coffeeListItem/CoffeeListItem";
 
 import './coffeeList.sass';
@@ -28,9 +27,9 @@ const CoffeeList = ({bestCoffee}) => {
 
     
     if(isLoading) {
-        return <Loading/>
+        return <Skeleton/>
     } else if(isError) {
-        return <ErrorMessage/>
+        return <p className='error'>Sorry, something went wrong</p>
     }
 
     const filterCoffeeByName = (arr) => {

@@ -2,7 +2,6 @@ import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { setFilterCountry, setFilterName } from './coffeeFilterSlice';
 import { useGetCounriesQuery } from '../../api/apiSlice';
-// import { useFormik } from 'formik';
 import classNames from 'classnames/bind';
 
 import './coffeeFilter.sass';
@@ -18,14 +17,6 @@ const CoffeeFilter = () => {
         isLoading
     } = useGetCounriesQuery();
 
-    // const formik = useFormik({
-    //     initialValues: {
-    //         name: ''
-    //     },
-    //     onSubmit: values => {
-    //         dispatch(setFilterName(values.name));
-    //     }
-    // });
     const onHandleChange = (e) => {
         e.preventDefault();
         const {value} = e.target;
@@ -37,9 +28,9 @@ const CoffeeFilter = () => {
     const renderBtns = (arr) => {
 
         if (isLoading) {
-            return <p className='input__label'>Please wait...</p>
+            return <p className='input__alert'>Please wait...</p>
         } else if (isError) {
-            return <p className='input__label'>Something went wrong</p>
+            return <p className='input__alert'>No filters</p>
         }
 
         return arr.map(item => {
