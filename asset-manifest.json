@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/coffee-app/static/css/main.5d1ad872.css",
+    "main.js": "/coffee-app/static/js/main.4002ca2a.js",
+    "static/media/bg.jpg": "/coffee-app/static/media/bg.35a313742cfd39312f6a.jpg",
+    "static/media/promoBg.jpg": "/coffee-app/static/media/promoBg.475a56365a4ce7878d35.jpg",
+    "static/media/mainBg.jpg": "/coffee-app/static/media/mainBg.51b7ce070911e8f774c2.jpg",
+    "static/media/aboutBeans.png": "/coffee-app/static/media/aboutBeans.b918eb6a753e9daa247c.png",
+    "static/media/Merienda-Regular.ttf": "/coffee-app/static/media/Merienda-Regular.650d7290853643088013.ttf",
+    "static/media/aboutOurGoals.png": "/coffee-app/static/media/aboutOurGoals.2aae63680305b600856e.png",
+    "static/media/Merienda-Bold.ttf": "/coffee-app/static/media/Merienda-Bold.38d48e86c0ff1ff84e1d.ttf",
+    "static/media/footer_icon_white.svg": "/coffee-app/static/media/footer_icon_white.2f3f9229fef9dcdce735.svg",
+    "static/media/footer_icon.svg": "/coffee-app/static/media/footer_icon.750dd53cdcf920a2a59b.svg",
+    "static/media/coffee_icon.svg": "/coffee-app/static/media/coffee_icon.0f87f98f729eb4940631b967962800dd.svg",
+    "static/media/coffee_icon_white.svg": "/coffee-app/static/media/coffee_icon_white.cec26eb8ac3fab7c456b23d5e6926733.svg",
+    "index.html": "/coffee-app/index.html",
+    "main.5d1ad872.css.map": "/coffee-app/static/css/main.5d1ad872.css.map",
+    "main.4002ca2a.js.map": "/coffee-app/static/js/main.4002ca2a.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5d1ad872.css",
+    "static/js/main.4002ca2a.js"
+  ]
+}
